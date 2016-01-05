@@ -10,6 +10,9 @@
 	$(function () {
 	  var options = $("html").data('swagger-options');
 
+      if(window.SwaggerTranslator) {
+        window.SwaggerTranslator.translate();
+      }
     window.swaggerUi = new SwaggerUi({
       url: options.app_url + options.url,
       dom_id: "swagger-ui-container",
